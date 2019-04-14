@@ -1,0 +1,23 @@
+{
+  "name": "express-api-routing",
+  "version": "0.0.1",
+  "description": "Simple and lightweight express router",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "router"
+  ],
+  "author": "wm",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-router": "0.0.1",
+    "mysql": "^2.16.0"
+  }
+}
