@@ -16,10 +16,10 @@ const APIRouting =  require('express-api-routing');
 #### 项目目录
 
 	|api
-		|admin
-			login.POST.js
-		test.GET.js
-	app.js
+	|	|admin
+	|	|	|login.POST.js
+	|	|test.GET.js
+	|app.js
 
 注意：api文件夹下的api文件名格式必须是
 
@@ -31,7 +31,7 @@ const APIRouting =  require('express-api-routing');
 
 ```js
 const express = require('express');
-const APIRouting = require('APIRouting');
+const APIRouting = require('express-api-routing');
 const mysql = require('mysql');
 const app = express();
 
@@ -43,8 +43,8 @@ let pool = mysql.createPool({
     password:'12345678'
 });
 
-APIRouting.rely({mysql,pool});
-//rely:向api文件传递数据
+APIRouting.globalStore({mysql,pool});
+//store:全局化对象
 
 app.use(APIRouting.static(__dirname,'./api'));
 //static:设置api文件的目录
@@ -60,10 +60,11 @@ app.listen(8088, () => {
 #### ./api/test.js
 
 ```js
-module.exports = (req,res,r)=>{
+module.exports = (req,res)=>{
     //req:是请求的对象
     //res:是响应对象
-   	//r:是rely传递的对象{mysql:...,pool:...}
+    pool.connection(...);
+    
     
     res.send('hello');
 }
