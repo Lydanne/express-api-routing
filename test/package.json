@@ -1,6 +1,6 @@
 {
   "name": "express-api-routing",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple and lightweight express router",
   "main": "index.js",
   "directories": {
@@ -16,8 +16,6 @@
   "author": "wm",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
-    "express-router": "0.0.1",
-    "mysql": "^2.16.0"
+    "express": "^4.16.4"
   }
 }
