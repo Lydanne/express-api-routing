@@ -1,6 +1,6 @@
 # Express-API-Routing
 ## 简述：
-    Express是一个简单的Express路由系统，他不需要你进行其他的操作，只需要将API文件放到规定的文件夹内，Express-API-Routing将自动加载到项目中。
+    Express-API-Routing是一个简单的Express路由系统，他不需要你进行其他的操作，只需要将API文件放到规定的文件夹内，Express-API-Routing将自动加载到项目中。
 ## 快速上手
 ### 安装Express-API-Routing到项目中
 
