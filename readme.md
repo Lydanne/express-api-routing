@@ -23,7 +23,8 @@ const APIRouting =  require('express-API-Routing');
 
 注意：api文件夹下的api文件名格式必须是
 
-​	<APINAME>.<GET|POST|…>.js
+	<APINAME>.<GET|POST|…>.js
+
 
 #### ./app.js
 
