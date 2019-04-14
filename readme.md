@@ -5,9 +5,9 @@
 ### 安装Express-API-Routing到项目中
 
 ```js
-npm i -S express-API-Routing
+npm i -S express-api-routing
 //下载
-const APIRouting =  require('express-API-Routing');
+const APIRouting =  require('express-api-routing');
 //引入
 ```
 

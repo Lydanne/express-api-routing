@@ -11,7 +11,7 @@ let pool = mysql.createPool({
     password:'12345678'
 });
 
-APIRouting.rely({mysql,pool});
+APIRouting.store({mysql,pool});
 app.use(APIRouting.static(__dirname,'./api'));
 
 app.listen(8088, () => {

@@ -1,5 +1,4 @@
 const methods = require('./Methods');
-let r = {};
 
 let static = (__dir,APIDir) => {
     let DirOBJ = methods.getDirList(APIDir);
@@ -19,22 +18,24 @@ let static = (__dir,APIDir) => {
     return (req, res, next) => {
         const APIPath = req.path+ '.' + req.method;
         
-        
         if (APIFind[APIPath]) {
-            API[APIPath](req,res,r);
-        }   
-
-        next();
+            API[APIPath](req,res);
+        }else{
+            next();
+        } 
     }
 }
 
-let rely = (bao)=>{
-    r = bao;
+let globalStore = (obj)=>{
+    for (const key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            const item = obj[key];
+            global[key] = item;
+        }
+    }
 }
-
-
 
 module.exports = {
     static,
-    rely
+    globalStore
 }
